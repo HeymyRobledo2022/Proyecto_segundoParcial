@@ -23,5 +23,16 @@ namespace Vista
             usuariosForm.Show();
 
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductosForm productosForm = new ProductosForm();
+            productosForm.Show();
+        }
     }
 }

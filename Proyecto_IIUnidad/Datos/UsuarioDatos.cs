@@ -68,7 +68,7 @@ namespace Datos
             bool inserto = false;
             try
             {
-                string sql = "INSERT INTO usuario VALUES (@Codigo, @Nombre, @Clave, @Correo, @Rol, @EstaActivo;";
+                string sql = "INSERT INTO usuario VALUES (@Codigo, @Nombre, @Clave, @Correo, @Rol, @EstaActivo);";
 
                 using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
                 {
@@ -88,7 +88,7 @@ namespace Datos
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
             }
@@ -120,7 +120,7 @@ namespace Datos
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
             }

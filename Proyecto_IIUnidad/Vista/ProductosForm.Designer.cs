@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Label1 = new System.Windows.Forms.Label();
             this.CodigoTextBox = new System.Windows.Forms.TextBox();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
@@ -46,8 +47,10 @@
             this.ModificarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.ProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Label1
@@ -91,6 +94,7 @@
             this.ExistenciaTextBox.Name = "ExistenciaTextBox";
             this.ExistenciaTextBox.Size = new System.Drawing.Size(234, 30);
             this.ExistenciaTextBox.TabIndex = 5;
+            this.ExistenciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ExistenciaTextBox_KeyPress);
             // 
             // label3
             // 
@@ -108,6 +112,7 @@
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(234, 30);
             this.PrecioTextBox.TabIndex = 7;
+            this.PrecioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioTextBox_KeyPress);
             // 
             // label4
             // 
@@ -143,6 +148,7 @@
             this.ImagenPictureBox.Location = new System.Drawing.Point(457, 38);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
             this.ImagenPictureBox.Size = new System.Drawing.Size(252, 239);
+            this.ImagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenPictureBox.TabIndex = 10;
             this.ImagenPictureBox.TabStop = false;
             // 
@@ -154,6 +160,7 @@
             this.AdjuntarImagenButton.TabIndex = 11;
             this.AdjuntarImagenButton.Text = "Adjuntar...";
             this.AdjuntarImagenButton.UseVisualStyleBackColor = true;
+            this.AdjuntarImagenButton.Click += new System.EventHandler(this.AdjuntarImagenButton_Click);
             // 
             // CancelarButton
             // 
@@ -178,6 +185,7 @@
             this.EliminarButton.TabIndex = 21;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
@@ -190,6 +198,7 @@
             this.GuardarButton.TabIndex = 20;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // ModificarButton
             // 
@@ -202,6 +211,7 @@
             this.ModificarButton.TabIndex = 19;
             this.ModificarButton.Text = "Modificar";
             this.ModificarButton.UseVisualStyleBackColor = true;
+            this.ModificarButton.Click += new System.EventHandler(this.ModificarButton_Click);
             // 
             // NuevoButton
             // 
@@ -228,6 +238,10 @@
             this.ProductosDataGridView.RowTemplate.Height = 29;
             this.ProductosDataGridView.Size = new System.Drawing.Size(899, 177);
             this.ProductosDataGridView.TabIndex = 23;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ProductosForm
             // 
@@ -258,6 +272,7 @@
             this.Load += new System.EventHandler(this.ProductosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +298,6 @@
         private Button ModificarButton;
         private Button NuevoButton;
         private DataGridView ProductosDataGridView;
+        private ErrorProvider errorProvider1;
     }
 }

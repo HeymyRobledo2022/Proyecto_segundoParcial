@@ -35,6 +35,7 @@
             this.inventariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +79,8 @@
             // 
             // inventariosToolStripMenuItem
             // 
+            this.inventariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listaDeProductosToolStripMenuItem});
             this.inventariosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inventariosToolStripMenuItem.Name = "inventariosToolStripMenuItem";
             this.inventariosToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
@@ -97,6 +100,13 @@
             this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(115, 29);
             this.facturacionToolStripMenuItem.Text = "Facturacion";
             // 
+            // listaDeProductosToolStripMenuItem
+            // 
+            this.listaDeProductosToolStripMenuItem.Name = "listaDeProductosToolStripMenuItem";
+            this.listaDeProductosToolStripMenuItem.Size = new System.Drawing.Size(244, 30);
+            this.listaDeProductosToolStripMenuItem.Text = "Lista de Productos";
+            this.listaDeProductosToolStripMenuItem.Click += new System.EventHandler(this.listaDeProductosToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -106,6 +116,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -122,5 +133,6 @@
         private ToolStripMenuItem inventariosToolStripMenuItem;
         private ToolStripMenuItem clientesToolStripMenuItem;
         private ToolStripMenuItem facturacionToolStripMenuItem;
+        private ToolStripMenuItem listaDeProductosToolStripMenuItem;
     }
 }
